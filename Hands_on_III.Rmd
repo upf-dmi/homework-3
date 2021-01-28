@@ -36,7 +36,7 @@ Use the breast cancer dataset to classify the patients using
 Do not forget to perform hyperparameter tuning! 
 Which of all models performs better for this data? Discuss.
 
-
+Generate a ROC curve for KNN 
 
 
 ```{r}
