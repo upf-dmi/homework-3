@@ -1,0 +1,50 @@
+---
+title: "Hands_on_sessions_4_5"
+author: "Janet Piñero (janet.pinero@upf.edu)"
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"      
+output:
+  html_document:
+    toc: true
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exercise 1
+
+Use the prostate cancer data ( Stamey et al. 1989) to train a model that predicts log of prostate-specific antigen. Investigate how to perform. In the publication, they examined the correlation between the level of prostate-specific antigen (PSA) and a number of clinical measures in men who were about to receive a radical prostatectomy. PSA is a protein that is produced by the prostate gland. The higher a man’s PSA level, the more likely it is that he has prostate cancer.
+The variables are log cancer volume (lcavol), log prostate weight (lweight), age, log of the amount of benign prostatic hyperplasia (lbph), seminal vesicle invasion (svi), log of capsular penetration (lcp), Gleason score (gleason), and percent of Gleason scores 4 or 5 (pgg45).
+
+Do not forget to perform subset selection of the features!
+
+```{r}
+
+```
+
+
+# Exercise 2
+
+Use the breast cancer dataset to classify the patients using
+- KNNs  
+- Decision trees  
+- Random forest  
+- Logistic Regression  
+ 
+Do not forget to perform hyperparameter tuning! 
+Which of all models performs better for this data? Discuss.
+
+
+
+
+```{r}
+
+```
+
+# session info {.unnumbered}
+
+```{r, results='asis',  echo=FALSE, message=FALSE }
+sessionInfo()
+```
