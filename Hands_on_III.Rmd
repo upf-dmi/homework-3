@@ -1,6 +1,6 @@
 ---
-title: "Hands_on_sessions_4_5"
-author: "Janet Piñero (janet.pinero@upf.edu)"
+title: "my title"
+author: "Dummy Surname (dummy@mail.com)"
 date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"      
 output:
   html_document:
@@ -13,12 +13,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+
 # Exercise 1
 
-Use the prostate cancer data ( Stamey et al. 1989) to train a model that predicts log of prostate-specific antigen. Investigate how to perform. In the publication, they examined the correlation between the level of prostate-specific antigen (PSA) and a number of clinical measures in men who were about to receive a radical prostatectomy. PSA is a protein that is produced by the prostate gland. The higher a man’s PSA level, the more likely it is that he has prostate cancer.
-The variables are log cancer volume (lcavol), log prostate weight (lweight), age, log of the amount of benign prostatic hyperplasia (lbph), seminal vesicle invasion (svi), log of capsular penetration (lcp), Gleason score (gleason), and percent of Gleason scores 4 or 5 (pgg45).
+[Stamey et al. 1989](https://www.auajournals.org/doi/10.1016/S0022-5347%2817%2941175-X) examined the correlation between the level of prostate-specific antigen (PSA) and a number of clinical measures in men who were about to receive a radical prostatectomy. PSA is a protein that is produced by the prostate gland. The higher a man’s PSA level, the more likely it is that he has prostate cancer.  
+Use the [prostate cancer dataset](data/prostate_data.txt), described [here](data/prostate_description.txt),  to train a model that predicts log of prostate-specific antigen. 
+The variables are    
 
-Do not forget to perform subset selection of the features!
+- log cancer volume (lcavol)  
+- log prostate weight (lweight)  
+- age  
+- log of the amount of benign prostatic hyperplasia (lbph)   
+- seminal vesicle invasion (svi)  
+- log of capsular penetration (lcp)  
+- Gleason score (gleason)    
+- percent of Gleason scores 4 or 5 (pgg45)  
+
+You can ignore column named "train" and do your own data splitting.  
+Do not forget to perform feature selection!   
+You can use as examples the [Linear Regression Lab](https://hastie.su.domains/ISLR2/Labs/Rmarkdown_Notebooks/Ch3-linreg-lab.html) and the section related to feature selection from  [Lab: Linear Models and Regularization Methods
+](https://hastie.su.domains/ISLR2/Labs/Rmarkdown_Notebooks/Ch6-varselect-lab.html) from the book [An Introduction to Statistical Learning](https://www.statlearning.com/).
+
 
 ```{r}
 
@@ -27,21 +42,43 @@ Do not forget to perform subset selection of the features!
 
 # Exercise 2
 
-Use the breast cancer dataset to classify the patients using
+Use the [breast cancer dataset](data/breat_cancer_data.csv) to train a model that predicts whether a future tumor image (with unknown diagnosis) is a benign or malignant tumor. Try different machine learning algorithms such as:   
 - KNNs  
 - Decision trees  
 - Random forest  
 - Logistic Regression  
- 
-Do not forget to perform hyperparameter tuning! 
-Which of all models performs better for this data? Discuss.
 
-Generate a ROC curve for KNN 
+The breast cancer dataset contains digitized breast cancer image features, and was created by [Dr. William H. Wolberg, W. Nick Street, and Olvi L. Mangasarian](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29). Each row in the data set represents an image of a tumor sample, including the diagnosis (benign or malignant) and several other measurements (nucleus texture, perimeter, area, and more). Diagnosis for each image was conducted by physicians.
+
+Do not forget to perform hyperparameter tuning!   
+Which of all models performs better for this data? Discuss.  
+
+Generate a ROC curve for all the models. 
+
+You can use as a guide the analysis of this dataset included in the [chapter 5](https://datasciencebook.ca/classification1.html) of the Data Science, A First Introduction Book.
+Additionally, for further information and ideas, you can check [this post](https://www.rebeccabarter.com/blog/2020-03-25_machine_learning/)
+
+```{r}
+
+```
+
+# Exercise 3  
+
+Use [The Cancer Genome Atlas (TCGA)](https://www.genome.gov/Funded-Programs-Projects/Cancer-Genome-Atlas) gene expression data of two different cancer types to build a machine learning model that identifies whether a given sample (gene counts) belongs to one or the other. The TCGA is a comprehensive and coordinated effort to accelerate our understanding of the molecular basis of cancer through the application of genome analysis technologies, including large-scale genome sequencing. The program has generated, analyzed, and made available genomic sequence, expression, methylation, and copy number variation data on over 11,000 individuals who represent over 30 different types of cancer. 
+After building your model, you should predict the cancer types for [10 unkwnon samples](data/unknwown_samples.tsv).  
+
+For this task, you should retrieve the TCGA data from the [Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/). If necessary you can watch [the video uploaded in the Campus Global](https://aulaglobal.upf.edu/mod/resource/view.php?id=1483539). The video assumes that you have previously installed the [GDC data transfer tool](https://gdc.cancer.gov/access-data/gdc-data-transfer-tool). 
+
+Each team will work with two specific cancer types, that will be assigned in class.
+
+Important notice: if you do not have a lot of hard drive space in your laptop, you can modify the manifest file to download only 50 samples per cancer types. 
 
 
 ```{r}
 
 ```
+
+
 
 # session info {.unnumbered}
 
